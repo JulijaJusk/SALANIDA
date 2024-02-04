@@ -1,4 +1,6 @@
 package lt.julija.page.salanida;
 
-public class AccountLoginPage {
+import lt.julija.page.PageBase;
+
+public class AccountLoginPage extends PageBase {
 }
