@@ -9,5 +9,7 @@ public class AccountLoginTest extends TestBase {
     @Override
     public void setUp() {
         AccountLoginPage.open("https://salanida.lt/en/account/login?return_url=%2Faccount",8);
+        AccountLoginPage.clickOnButtonAcceptCookies();
+        AccountLoginPage.refreshWebPage(7);
     }
 }
