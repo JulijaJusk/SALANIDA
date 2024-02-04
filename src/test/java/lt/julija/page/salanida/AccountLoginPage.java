@@ -19,4 +19,8 @@ public class AccountLoginPage extends PageBase {
         Common.waitElementVisible(Locator.Salanida.AccountLogin.inputEmail, 8);
         Common.sendKeysToElement(Locator.Salanida.AccountLogin.inputEmail, email);
     }
+
+    public static void enterPassword(String password) {
+        Common.sendKeysToElement(Locator.Salanida.AccountLogin.inputPassword, password);
+    }
 }
