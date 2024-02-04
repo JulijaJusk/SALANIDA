@@ -19,14 +19,13 @@ public class AccountLoginTest extends TestBase {
     public void testEnterValidLoginDetails(){
         String email = "julija.demoqa@gmail.com";
         String password = "SalanidaVilnius";
-        String expectedResult = "";
+        String expectedResult = "Julia Roberts Lietuva";
         String actualResult;
 
         AccountLoginPage.enterEmail(email);
         AccountLoginPage.enterPassword(password);
         AccountLoginPage.clickOnButtonLogin();
         actualResult = AccountLoginPage.readAccountName();
-
 
         Assert.assertTrue(
                 actualResult.contains(expectedResult),

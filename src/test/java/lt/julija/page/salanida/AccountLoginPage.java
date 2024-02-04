@@ -23,4 +23,13 @@ public class AccountLoginPage extends PageBase {
     public static void enterPassword(String password) {
         Common.sendKeysToElement(Locator.Salanida.AccountLogin.inputPassword, password);
     }
+
+    public static void clickOnButtonLogin() {
+        Common.clickOnElement(Locator.Salanida.AccountLogin.buttonLogin);
+    }
+
+    public static String readAccountName() {
+        Common.waitElementVisible(Locator.Salanida.AccountLogin.paragraphReadAccountName, 8);
+        return Common.getTextFromElement(Locator.Salanida.AccountLogin.paragraphReadAccountName);
+    }
 }

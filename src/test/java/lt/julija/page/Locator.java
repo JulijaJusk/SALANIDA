@@ -7,9 +7,10 @@ public class Locator {
         public static class AccountLogin {
 
             public static By buttonAcceptCookies = By.xpath("/html/body/div[2]/div");
-            public static By inputEmail = By
-                    .xpath("/html/body/div[8]/main/div/section/div/div/form[2]/div[1]");
+            public static By inputEmail = By.xpath("//*[@id=\"customer_login\"]/div[1]/input");
             public static By inputPassword = By.xpath("//input[@type='password']");
+            public static By buttonLogin = By.xpath("//*[@id=\"customer_login\"]/button");
+            public static By paragraphReadAccountName = By.xpath("//p[@class='AccountAddress']");
         }
     }
 }
