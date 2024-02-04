@@ -1,4 +1,6 @@
 package lt.julija.test.salanida;
 
-public class AccountLoginTest {
+import lt.julija.test.TestBase;
+
+public class AccountLoginTest extends TestBase {
 }
