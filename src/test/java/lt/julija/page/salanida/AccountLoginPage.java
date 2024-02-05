@@ -18,14 +18,34 @@ public class AccountLoginPage extends PageBase {
     public static void enterEmail(String email) {
         Common.waitElementVisible(Locator.Salanida.AccountLogin.inputEmail, 8);
         Common.sendKeysToElement(Locator.Salanida.AccountLogin.inputEmail, email);
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void enterPassword(String password) {
+        Common.waitElementIsEnabledCustomised(Locator.Salanida.AccountLogin.inputPassword,8);
         Common.sendKeysToElement(Locator.Salanida.AccountLogin.inputPassword, password);
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void clickOnButtonLogin() {
         Common.clickOnElement(Locator.Salanida.AccountLogin.buttonLogin);
+    }
+
+    public static void waitElementIsEnabledCustomised(int sec) {
+
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public static String readAccountName() {
@@ -33,3 +53,4 @@ public class AccountLoginPage extends PageBase {
         return Common.getTextFromElement(Locator.Salanida.AccountLogin.paragraphReadAccountName);
     }
 }
+
