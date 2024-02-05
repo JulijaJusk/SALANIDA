@@ -6,7 +6,7 @@ public class Locator {
     public static class Salanida {
         public static class AccountLogin {
 
-            public static By buttonAcceptCookies = By.xpath("/html/body/div[2]/div");
+            public static By buttonAcceptCookies = By.xpath("//*[@id=\"ba-cookie-dismiss\"]");
             public static By inputEmail = By.xpath("//*[@id=\"customer_login\"]/div[1]/input");
             public static By inputPassword = By.xpath("//input[@type='password']");
             public static By buttonLogin = By.xpath("//*[@id=\"customer_login\"]/button");
