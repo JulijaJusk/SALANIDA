@@ -1,5 +1,6 @@
 package lt.julija.test.salanida;
 
+import lt.julija.page.Locator;
 import lt.julija.page.salanida.AccountLoginPage;
 import lt.julija.test.TestBase;
 import org.testng.Assert;
@@ -17,9 +18,10 @@ public class AccountLoginTest extends TestBase {
 
     @Test
     public void testEnterValidLoginDetails(){
+
         String email = "julija.demoqa@gmail.com";
         String password = "SalanidaVilnius";
-        String expectedResult = "Julia Roberts Lietuva";
+        String expectedResult = "Julia Roberts";
         String actualResult;
 
         AccountLoginPage.enterEmail(email);
