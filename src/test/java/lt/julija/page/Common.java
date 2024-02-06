@@ -119,4 +119,11 @@ public class Common {
                 .contextClick(getElement(locator))
                 .perform();
     }
+
+    public static void sendKeysToElementByActions(By locator, String email) {
+        getActions()
+                .moveToElement(getElement(locator))
+                .sendKeys(email)
+                .perform();
+    }
 }

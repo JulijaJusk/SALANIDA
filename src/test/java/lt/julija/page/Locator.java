@@ -4,6 +4,10 @@ import org.openqa.selenium.By;
 
 public class Locator {
     public static class Salanida {
+
+        public static By buttonManageAddresses = By.xpath("//a[@class='Button Button--primary']");
+        public static By buttonAddNewAddresses = By.xpath("");
+
         public static class AccountLogin {
 
             public static By buttonAcceptCookies = By.xpath("//*[@id=\"ba-cookie-dismiss\"]");
