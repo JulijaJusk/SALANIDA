@@ -19,7 +19,6 @@ public class Locator {
 
         public static class AddNewAccountAddress {
 
-
             public static By buttonManageAddresses = By.xpath("//a[@class='Button Button--primary']");
             public static By buttonAddNewAddress = By.xpath("//button[@class='Button Button--primary']");
             public static By inputCity = By.xpath("//input[@name='address[city]']");
@@ -28,5 +27,15 @@ public class Locator {
                     .xpath("//button[@class='Form__Submit Button Button--primary Button--full']");
             public static By paragraphAddressCity = By.xpath("//p[@class='AccountAddress']");
         }
+
+        public static class PositiveSearchFunction {
+
+            public static By buttonSearch = By.xpath("//a[@href='/en/search']");
+            public static By inputItemName = By.xpath("//input[@type='search']");
+            public static By paragraphItemName = By
+                    .xpath("(//a[contains(@href, 'melody-jumper-white')])[2]");
+        }
     }
 }
+
+
