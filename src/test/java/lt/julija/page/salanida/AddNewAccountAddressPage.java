@@ -39,4 +39,29 @@ public class AddNewAccountAddressPage extends PageBase {
         Common.clickOnElement(Locator.Salanida.AccountLogin.buttonLogin);
     }
 
+    public static void clickOnButtonManageAddresses() {
+        Common.clickOnElement(Locator.Salanida.AddNewAccountAddress.buttonManageAddresses);
+    }
+
+    public static void clickOnButtonAddANewAddress() {
+        Common.clickOnElement(Locator.Salanida.AddNewAccountAddress.buttonAddNewAddress);
+    }
+
+    public static void enterCity(String city) {
+        Common.waitElementIsEnabledCustomised(Locator.Salanida.AddNewAccountAddress.inputCity, 8);
+        Common.sendKeysToElement(Locator.Salanida.AddNewAccountAddress.inputCity, city);
+    }
+
+    public static void clickOnElementSetDefault() {
+        Common.clickOnElement(Locator.Salanida.AddNewAccountAddress.checkDefaultAddress);
+    }
+
+    public static void clickOnButtonAddANewAddress2() {
+        Common.clickOnElement(Locator.Salanida.AddNewAccountAddress.buttonAddANewAddress2);
+    }
+
+    public static String readAddressCity() {
+        Common.waitElementVisible(Locator.Salanida.AddNewAccountAddress.paragraphAddressCity, 8);
+        return Common.getTextFromElement(Locator.Salanida.AddNewAccountAddress.paragraphAddressCity);
+    }
 }
