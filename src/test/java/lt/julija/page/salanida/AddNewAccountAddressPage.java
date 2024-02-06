@@ -1,4 +1,7 @@
 package lt.julija.page.salanida;
 
-public class AddNewAccountAddressPage {
+import lt.julija.page.PageBase;
+
+public class AddNewAccountAddressPage extends PageBase {
+
 }
