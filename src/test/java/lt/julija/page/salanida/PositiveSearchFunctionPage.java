@@ -37,6 +37,11 @@ public class PositiveSearchFunctionPage extends PageBase {
 
     public static void clickOnButtonLogin() {
         Common.clickOnElement(Locator.Salanida.AccountLogin.buttonLogin);
+        try {
+            Thread.sleep(3560);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void clickOnSearchElement() {
@@ -44,7 +49,7 @@ public class PositiveSearchFunctionPage extends PageBase {
     }
 
     public static void enterItemName(String item) {
- //       Common.waitElementIsEnabledCustomised(Locator.Salanida.PositiveSearchFunction.inputItemName, 8);
+        Common.waitElementIsEnabledCustomised(Locator.Salanida.PositiveSearchFunction.inputItemName, 8);
         Common.sendKeysToElement(Locator.Salanida.PositiveSearchFunction.inputItemName, item);
         try {
             Thread.sleep(2000);
@@ -54,7 +59,7 @@ public class PositiveSearchFunctionPage extends PageBase {
     }
 
     public static String readItemName() {
-        //       Common.waitElementVisible(Locator.Salanida.PositiveSearchFunction.paragraphItemName, 8);
+               Common.waitElementVisible(Locator.Salanida.PositiveSearchFunction.paragraphItemName, 8);
         return Common.getTextFromElement(Locator.Salanida.PositiveSearchFunction.paragraphItemName);
     }
 }

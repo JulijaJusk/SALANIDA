@@ -26,7 +26,7 @@ public class PositiveSearchFunctionTest extends TestBase {
     public void testPositiveInputSearch(){
 
         String item = "WHITE MOHAIR";
-        String expectedResult = "WHITE MOHAIR";
+        String expectedResult = "MELODY MOHAIR JUMPER WHITE";
         String actualResult;
         PositiveSearchFunctionPage.clickOnSearchElement();
         PositiveSearchFunctionPage.enterItemName(item);
