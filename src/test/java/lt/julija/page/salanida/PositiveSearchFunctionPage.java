@@ -1,4 +1,6 @@
 package lt.julija.page.salanida;
 
-public class PositiveSearchFunctionPage {
+import lt.julija.page.PageBase;
+
+public class PositiveSearchFunctionPage extends PageBase {
 }
