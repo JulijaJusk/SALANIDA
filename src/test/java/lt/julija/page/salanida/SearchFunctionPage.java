@@ -4,7 +4,7 @@ import lt.julija.page.Common;
 import lt.julija.page.Locator;
 import lt.julija.page.PageBase;
 
-public class PositiveSearchFunctionPage extends PageBase {
+public class SearchFunctionPage extends PageBase {
 
     public static void refreshWebPage(int sec) {
         Common.refreshPage(sec);
@@ -45,13 +45,13 @@ public class PositiveSearchFunctionPage extends PageBase {
     }
 
     public static void clickOnSearchElement() {
-        Common.waitElementVisible(Locator.Salanida.PositiveSearchFunction.buttonSearch,6);
-        Common.clickOnElement(Locator.Salanida.PositiveSearchFunction.buttonSearch);
+        Common.waitElementVisible(Locator.Salanida.SearchFunction.buttonSearch,7);
+        Common.clickOnElement(Locator.Salanida.SearchFunction.buttonSearch);
     }
 
-    public static void enterItemName(String item) {
-        Common.waitElementIsEnabledCustomised(Locator.Salanida.PositiveSearchFunction.inputItemName, 8);
-        Common.sendKeysToElement(Locator.Salanida.PositiveSearchFunction.inputItemName, item);
+    public static void enterItemName(String input) {
+        Common.waitElementIsEnabledCustomised(Locator.Salanida.SearchFunction.inputItemName, 8);
+        Common.sendKeysToElement(Locator.Salanida.SearchFunction.inputItemName, input);
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -60,7 +60,11 @@ public class PositiveSearchFunctionPage extends PageBase {
     }
 
     public static String readItemName() {
-        Common.waitElementVisible(Locator.Salanida.PositiveSearchFunction.paragraphItemName, 8);
-        return Common.getTextFromElement(Locator.Salanida.PositiveSearchFunction.paragraphItemName);
+        Common.waitElementVisible(Locator.Salanida.SearchFunction.paragraphItemName, 8);
+        return Common.getTextFromElement(Locator.Salanida.SearchFunction.paragraphItemName);
+    }
+
+    public static String readItemOnNegativeSearch() {
+        return Common.getTextFromElement(Locator.Salanida.SearchFunction.paragraphMessage);
     }
 }
