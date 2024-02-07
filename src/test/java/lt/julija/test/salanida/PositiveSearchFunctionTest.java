@@ -14,7 +14,7 @@ public class PositiveSearchFunctionTest extends TestBase {
     public void setUp() {
         String email = "julija.demoqa@gmail.com";
         String password = "SalanidaVilnius";
-        PositiveSearchFunctionPage.open("https://salanida.lt/en/account/login?return_url=%2Faccount",8);
+        PositiveSearchFunctionPage.open("https://salanida.lt/en/account/login?return_url=%2Faccount", 8);
         PositiveSearchFunctionPage.clickOnButtonAcceptCookies();
         PositiveSearchFunctionPage.refreshWebPage(7);
         PositiveSearchFunctionPage.enterEmail(email);
@@ -23,11 +23,12 @@ public class PositiveSearchFunctionTest extends TestBase {
     }
 
     @Test
-    public void testPositiveInputSearch(){
+    public void testPositiveInputSearch() {
 
         String item = "WHITE MOHAIR";
         String expectedResult = "MELODY MOHAIR JUMPER WHITE";
         String actualResult;
+
         PositiveSearchFunctionPage.clickOnSearchElement();
         PositiveSearchFunctionPage.enterItemName(item);
         actualResult = PositiveSearchFunctionPage.readItemName();

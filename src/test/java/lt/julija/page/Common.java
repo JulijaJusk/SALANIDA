@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Common {
@@ -127,8 +128,20 @@ public class Common {
                 .perform();
     }
 
-    public static void clickOnElements(By locator){
+    public static void clickOnElements(By locator) {
         List<WebElement> elements = getElements(locator);
         elements.get(0).click();
+    }
+
+    public static List<String> getTextFromElements(By locator) {
+        List<WebElement> elements = getElements(locator);
+        List<String> nameOfSizes = new ArrayList<>();
+
+        for (int i = 0; i < elements.size(); i++) {
+            String size = elements.get(i).getText();
+            nameOfSizes.add(size);
+        }
+
+        return nameOfSizes;
     }
 }
