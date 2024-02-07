@@ -64,7 +64,7 @@ public class SearchFunctionPage extends PageBase {
         return Common.getTextFromElement(Locator.Salanida.SearchFunction.paragraphItemName);
     }
 
-    public static String readItemOnNegativeSearch() {
+    public static String readFoundResultMessage() {
         return Common.getTextFromElement(Locator.Salanida.SearchFunction.paragraphMessage);
     }
 }

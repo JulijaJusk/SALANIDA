@@ -21,7 +21,7 @@ public class SearchFunctionTest extends TestBase {
     }
 
     @Test
-    public void testPositiveInputSearch() {
+    public void testSearchFunctionUsingInputWhite_Mohair() {
 
         String item = "WHITE MOHAIR";
         String expectedResult = "MELODY MOHAIR JUMPER WHITE";
@@ -38,7 +38,7 @@ public class SearchFunctionTest extends TestBase {
     }
 
     @Test
-    public void testNegativeInputSearch() {
+    public void testSearchFunctionUsingNumbers12345() {
 
         String negativeInput = "12345";
         String expectedResult = "No results could be found";
@@ -46,7 +46,7 @@ public class SearchFunctionTest extends TestBase {
 
         SearchFunctionPage.clickOnSearchElement();
         SearchFunctionPage.enterItemName(negativeInput);
-        actualResult = SearchFunctionPage.readItemOnNegativeSearch();
+        actualResult = SearchFunctionPage.readFoundResultMessage();
 
         Assert.assertTrue(
                 actualResult.contains(expectedResult),
