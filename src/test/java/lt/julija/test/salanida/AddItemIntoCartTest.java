@@ -1,4 +1,6 @@
 package lt.julija.test.salanida;
 
-public class AddItemIntoCartTest {
+import lt.julija.test.TestBase;
+
+public class AddItemIntoCartTest extends TestBase {
 }
