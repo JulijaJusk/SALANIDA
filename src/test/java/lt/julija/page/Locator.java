@@ -5,9 +5,6 @@ import org.openqa.selenium.By;
 public class Locator {
     public static class Salanida {
 
-        public static By buttonManageAddresses = By.xpath("//a[@class='Button Button--primary']");
-        public static By buttonAddNewAddresses = By.xpath("");
-
         public static class AccountLogin {
 
             public static By buttonAcceptCookies = By.xpath("//*[@id=\"ba-cookie-dismiss\"]");
@@ -34,6 +31,12 @@ public class Locator {
             public static By inputItemName = By.xpath("//input[@type='search']");
             public static By paragraphItemName = By
                     .xpath("(//a[contains(@href, 'melody-jumper-white')])[2]");
+        }
+
+        public static class AddItemIntoCart {
+
+
+            public static By buttonAcceptCookies = By.xpath("");
         }
     }
 }
