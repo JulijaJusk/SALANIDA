@@ -37,11 +37,11 @@ public class Locator {
 
             public static By buttonSearch = By.xpath("//a[@href='/en/search']");
             public static By inputCategoryName = By.xpath("//input[@type='search']");
-            public static By firstProduct = By.xpath("//div[@class='Segment__Content'][1]");
-            public static By allAvailableSizes = By.xpath("//div[@class='ProductForm__Variants']");
+            public static By firstProduct = By
+                    .xpath("(//div[@class='Segment__Content'])[1]//div[@onclick][1]");
+            public static By allAvailableSizes = By.xpath("//div[@class='ProductForm__Variants']//li/label");
             public static By listItemSize(int size) {
-                return By.xpath("(//div[@class='ProductForm__Variants']" +
-                        "/li[not (contains(@class,'inactive'))]/span)[%s]".formatted(size));
+                return By.xpath("(//div[@class='ProductForm__Variants']//li/label)[%s]".formatted(size));
             }
             public static By buttonAddToCart = By
                     .xpath("//button[@class='ProductForm__AddToCart Button Button--secondary Button--full']");

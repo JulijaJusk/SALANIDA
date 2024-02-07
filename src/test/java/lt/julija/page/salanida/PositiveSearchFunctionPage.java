@@ -45,6 +45,7 @@ public class PositiveSearchFunctionPage extends PageBase {
     }
 
     public static void clickOnSearchElement() {
+        Common.waitElementVisible(Locator.Salanida.PositiveSearchFunction.buttonSearch,6);
         Common.clickOnElement(Locator.Salanida.PositiveSearchFunction.buttonSearch);
     }
 
@@ -59,7 +60,7 @@ public class PositiveSearchFunctionPage extends PageBase {
     }
 
     public static String readItemName() {
-               Common.waitElementVisible(Locator.Salanida.PositiveSearchFunction.paragraphItemName, 8);
+        Common.waitElementVisible(Locator.Salanida.PositiveSearchFunction.paragraphItemName, 8);
         return Common.getTextFromElement(Locator.Salanida.PositiveSearchFunction.paragraphItemName);
     }
 }
