@@ -5,13 +5,13 @@ import lt.julija.page.Locator;
 import lt.julija.page.PageBase;
 
 import java.util.List;
-import java.util.Objects;
+
 
 public class AddItemIntoCartPage extends PageBase {
 
     public static void clickOnButtonAcceptCookies() {
         Common.waitElementVisible(Locator.Salanida.AccountLogin.buttonAcceptCookies, 6);
-//        Common.clickOnElement(Locator.Salanida.AccountLogin.buttonAcceptCookies);
+
         Common.clickOnElementByActions(Locator.Salanida.AccountLogin.buttonAcceptCookies);
     }
 
