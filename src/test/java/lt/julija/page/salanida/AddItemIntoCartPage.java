@@ -1,4 +1,6 @@
 package lt.julija.page.salanida;
 
-public class AddItemIntoCartPage {
+import lt.julija.page.PageBase;
+
+public class AddItemIntoCartPage extends PageBase {
 }
