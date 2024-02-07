@@ -31,7 +31,7 @@ public class Locator {
             public static By inputItemName = By.xpath("//input[@type='search']");
             public static By paragraphItemName = By
                     .xpath("(//a[contains(@href, 'melody-jumper-white')])[2]");
-            public static By paragraphMessage = By.xpath("");
+            public static By paragraphMessage = By.xpath("//div[@class='Segment__Content']//p[1]");
         }
 
         public static class AddItemIntoCart {
