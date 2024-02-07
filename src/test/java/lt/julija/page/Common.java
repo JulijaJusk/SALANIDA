@@ -126,4 +126,9 @@ public class Common {
                 .sendKeys(email)
                 .perform();
     }
+
+    public static void clickOnElements(By locator){
+        List<WebElement> elements = getElements(locator);
+        elements.get(0).click();
+    }
 }
