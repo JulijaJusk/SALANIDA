@@ -18,14 +18,15 @@ public class AddItemIntoCartTest extends TestBase {
     public void testAddSpecificSizeItemIntoCart() {
         String category = "MOHAIR";
         String sizeToSelect = "L-XL";
-        String expectedResult = "L-XL";
-        String actualResult = null;
+        String expectedResult = "MELODY MOHAIR JUMPER WHITE";
+        String actualResult = "";
 
         AddItemIntoCartPage.clickOnSearchElement();
         AddItemIntoCartPage.enterItemName(category);
         AddItemIntoCartPage.addFirstProductIntoCart();
         AddItemIntoCartPage.selectSize(sizeToSelect);
         AddItemIntoCartPage.clickOnButtonAddToCart();
+        actualResult = AddItemIntoCartPage.readItemName();
 
         Assert.assertTrue(
                 actualResult.contains(expectedResult),

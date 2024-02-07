@@ -35,7 +35,7 @@ public class AddItemIntoCartPage extends PageBase {
     }
 
     public static void selectSize(String size) {
-        Common.waitElementVisible(Locator.Salanida.AddItemIntoCart.allAvailableSizes,6);
+        Common.waitElementVisible(Locator.Salanida.AddItemIntoCart.allAvailableSizes, 6);
         List<String> listOfAvailableSizes = Common.getTextFromElements(Locator.Salanida
                 .AddItemIntoCart.allAvailableSizes);
         int itemToSelect = 1;
@@ -52,4 +52,10 @@ public class AddItemIntoCartPage extends PageBase {
     public static void clickOnButtonAddToCart() {
         Common.clickOnElement(Locator.Salanida.AddItemIntoCart.buttonAddToCart);
     }
+
+    public static String readItemName() {
+        Common.waitElementVisible(Locator.Salanida.AddItemIntoCart.paragraphReadItemName, 8);
+        return Common.getTextFromElement(Locator.Salanida.AddItemIntoCart.paragraphReadItemName);
+    }
 }
+
