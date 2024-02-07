@@ -7,7 +7,7 @@ public class Locator {
 
         public static class AccountLogin {
 
-            public static By buttonAcceptCookies = By.xpath("//*[@id=\"ba-cookie-dismiss\"]");
+            public static By buttonAcceptCookies = By.xpath("//a[@aria-label='dismiss cookie message'][1]");
             public static By inputEmail = By.xpath("//*[@id=\"customer_login\"]/div[1]/input");
             public static By inputPassword = By.xpath("//input[@type='password']");
             public static By buttonLogin = By.xpath("//*[@id=\"customer_login\"]/button");
@@ -35,8 +35,18 @@ public class Locator {
 
         public static class AddItemIntoCart {
 
+            public static By buttonSearch = By.xpath("//a[@href='/en/search']");
+            public static By inputCategoryName = By.xpath("//input[@type='search']");
+            public static By firstProduct = By.xpath("//div[@class='Segment__Content'][1]");
+            public static By allAvailableSizes = By.xpath("//div[@class='ProductForm__Variants']");
+            public static By listItemSize(int size) {
+                return By.xpath("(//div[@class='ProductForm__Variants']" +
+                        "/li[not (contains(@class,'inactive'))]/span)[%s]".formatted(size));
+            }
+            public static By buttonAddToCart = By
+                    .xpath("//button[@class='ProductForm__AddToCart Button Button--secondary Button--full']");
 
-            public static By buttonAcceptCookies = By.xpath("");
+
         }
     }
 }
