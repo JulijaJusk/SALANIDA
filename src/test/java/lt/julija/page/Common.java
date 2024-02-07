@@ -12,9 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Common {
-    public static void setUpDriver() {
-        Driver.setDriver();
-    }
 
     public static void setUpDriver(int seconds) {
         Driver.setDriver();
@@ -59,11 +56,6 @@ public class Common {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    public static void waitElementWhenClickable(By locator, int sec) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(sec));
-        wait.until(ExpectedConditions.elementToBeClickable(locator));
-    }
-
     public static boolean waitElementIsEnabledCustomised(By locator, int sec) {
         boolean isEnabled = false;
         int i = 0;
@@ -83,17 +75,6 @@ public class Common {
         return isEnabled;
     }
 
-    public static String getElementAttributeValue(By locator, String attributeName) {
-        return getElement(locator).getAttribute(attributeName);
-    }
-
-    public static void waitElementAttributeContains(
-            By locator, String attributeName, String attributeName1, String attributeValue, int sec
-    ) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(sec));
-        wait.until(ExpectedConditions.attributeContains(locator, attributeName, attributeValue));
-    }
-
     public static void clickOnElementByActions(By locator) {
         getActions()
 
@@ -103,34 +84,6 @@ public class Common {
 
     private static Actions getActions() {
         return new Actions(Driver.getDriver());
-    }
-
-    public static void doubleClickOnElementByActions(By locator) {
-        getActions()
-                .doubleClick(getElement(locator))
-                .perform();
-    }
-
-    public static void implicitWaitForDriver(int sec) {
-        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(sec));
-    }
-
-    public static void rightClickOnElementByActions(By locator) {
-        getActions()
-                .contextClick(getElement(locator))
-                .perform();
-    }
-
-    public static void sendKeysToElementByActions(By locator, String email) {
-        getActions()
-                .moveToElement(getElement(locator))
-                .sendKeys(email)
-                .perform();
-    }
-
-    public static void clickOnElements(By locator) {
-        List<WebElement> elements = getElements(locator);
-        elements.get(0).click();
     }
 
     public static List<String> getTextFromElements(By locator) {
