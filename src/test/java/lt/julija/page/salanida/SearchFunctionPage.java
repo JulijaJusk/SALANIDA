@@ -45,7 +45,7 @@ public class SearchFunctionPage extends PageBase {
     }
 
     public static void clickOnSearchElement() {
-        Common.waitElementVisible(Locator.Salanida.SearchFunction.buttonSearch,7);
+        Common.waitElementVisible(Locator.Salanida.SearchFunction.buttonSearch, 7);
         Common.clickOnElement(Locator.Salanida.SearchFunction.buttonSearch);
     }
 
