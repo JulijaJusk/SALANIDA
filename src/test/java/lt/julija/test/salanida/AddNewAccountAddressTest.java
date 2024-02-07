@@ -1,6 +1,5 @@
 package lt.julija.test.salanida;
 
-import lt.julija.page.salanida.AccountLoginPage;
 import lt.julija.page.salanida.AddNewAccountAddressPage;
 import lt.julija.test.TestBase;
 import org.testng.Assert;
