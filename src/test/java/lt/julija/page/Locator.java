@@ -48,6 +48,18 @@ public class Locator {
             public static By buttonAddToCart = By
                     .xpath("//button[@class='ProductForm__AddToCart Button Button--secondary Button--full']");
         }
+
+        public static class GiftCardApplication {
+
+
+            public static By checkTermsAndConditions = By.xpath("//*[@id=\"agree\"]");
+            public static By buttonCheckout = By.xpath("//button[@name='checkout']");
+            public static By inputInvalidGiftCode = By
+                    .xpath("//input[@placeholder='Discount code or gift card']");
+            public static By buttonApply = By.xpath("//button[@aria-label='Apply Discount Code']");
+            public static By paragraphReadRejectionMessage= By
+                    .xpath("//span[@class='_7ozb2u1l']");
+        }
     }
 }
 
