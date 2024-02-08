@@ -1,4 +1,6 @@
 package lt.julija.page.salanida;
 
-public class GiftCardApplicationPage {
+import lt.julija.page.PageBase;
+
+public class GiftCardApplicationPage extends PageBase {
 }
