@@ -29,7 +29,7 @@ public class AddNewAccountAddressTest extends TestBase {
         AddNewAccountAddressPage.clickOnButtonManageAddresses();
         AddNewAccountAddressPage.clickOnButtonAddANewAddress();
         AddNewAccountAddressPage.enterCity(city);
-        AddNewAccountAddressPage.clickOnElementSetDefault();
+        AddNewAccountAddressPage.clickOnCheckboxSetDefault();
         AddNewAccountAddressPage.clickOnButtonAddANewAddress2();
         actualResult = AddNewAccountAddressPage.readAddressCity();
 

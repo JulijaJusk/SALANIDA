@@ -52,7 +52,7 @@ public class AddNewAccountAddressPage extends PageBase {
         Common.sendKeysToElement(Locator.Salanida.AddNewAccountAddress.inputCity, city);
     }
 
-    public static void clickOnElementSetDefault() {
+    public static void clickOnCheckboxSetDefault() {
         Common.clickOnElement(Locator.Salanida.AddNewAccountAddress.checkDefaultAddress);
     }
 
