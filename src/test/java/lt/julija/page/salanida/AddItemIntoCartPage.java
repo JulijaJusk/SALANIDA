@@ -6,7 +6,6 @@ import lt.julija.page.PageBase;
 
 import java.util.List;
 
-
 public class AddItemIntoCartPage extends PageBase {
 
     public static void clickOnButtonAcceptCookies() {

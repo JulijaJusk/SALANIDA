@@ -1,6 +1,5 @@
 package lt.julija.test.salanida;
 
-import lt.julija.page.salanida.AddItemIntoCartPage;
 import lt.julija.page.salanida.GiftCardApplicationPage;
 import lt.julija.test.TestBase;
 import org.testng.Assert;

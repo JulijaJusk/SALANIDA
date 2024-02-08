@@ -40,24 +40,26 @@ public class Locator {
             public static By inputCategoryName = By.xpath("//input[@type='search']");
             public static By firstProduct = By
                     .xpath("(//div[@class='Segment__Content'])[1]//div[@onclick][1]");
-            public static By allAvailableSizes = By.xpath("//div[@class='ProductForm__Variants']//li/label");
+            public static By allAvailableSizes = By
+                    .xpath("//div[@class='ProductForm__Variants']//li/label");
             public static By paragraphReadItemName = By.xpath("//h2[@class='CartItem__Title Heading']");
+
             public static By listItemSize(int size) {
                 return By.xpath("(//div[@class='ProductForm__Variants']//li/label)[%s]".formatted(size));
             }
+
             public static By buttonAddToCart = By
                     .xpath("//button[@class='ProductForm__AddToCart Button Button--secondary Button--full']");
         }
 
         public static class GiftCardApplication {
 
-
             public static By checkTermsAndConditions = By.xpath("//*[@id=\"agree\"]");
             public static By buttonCheckout = By.xpath("//button[@name='checkout']");
             public static By inputInvalidGiftCode = By
                     .xpath("//input[@placeholder='Discount code or gift card']");
             public static By buttonApply = By.xpath("//button[@aria-label='Apply Discount Code']");
-            public static By paragraphReadRejectionMessage= By
+            public static By paragraphReadRejectionMessage = By
                     .xpath("//span[@class='_7ozb2u1l']");
         }
     }
