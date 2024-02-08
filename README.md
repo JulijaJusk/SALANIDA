@@ -1,4 +1,4 @@
-# The final assignment: Online clothing store "SALANIDA"
+### The final assignment: Online clothing store "SALANIDA"
 Website address: https://salanida.lt/en
 
 Login address: https://salanida.lt/en/account/login?return_url=%2Fen%2Faccount
@@ -10,15 +10,16 @@ Login address: https://salanida.lt/en/account/login?return_url=%2Fen%2Faccount
    2. Enter text in input field "Password"; (I entered “SalanidaVilnius”)
    3. Click on button “LOGIN”;
 
-   **Expected:** correct account name <"Julia Roberts" appears.
+   **Expected:** correct account name "Julia Roberts" appears.
 
 
    **#2. Add new account address using valid city**
-   1. Login into the account using “julija.demoqa@gmail.com” username and “SalanidaVilnius” password;
+   1. Login into the account using “julija.demoqa@gmail.com” username and "SalanidaVilnius" password;
    2. Click on button "MANAGE ADDRESSES";
    3. Click on button "ADD A NEW ADDRESS";
    4. Enter text “Vilnius” in the input field "City";
-   5. Click on button "EDIT AN ADDRESS";
+   5. Click on checkbox "Set as default address";
+   6. Click on button "ADD A NEW ADDRESS";
    
    **Expected:** entered city appears in the “DEFAULT ADDRESS” section.
 
@@ -44,7 +45,7 @@ Login address: https://salanida.lt/en/account/login?return_url=%2Fen%2Faccount
    2. Enter text “MOHAIR” in the input field "SEARCH…";
    3. Click the first item from the search results list;
    4. Choose size "L-XL";
-   5. Click on button <"ADD TO CART";
+   5. Click on button "ADD TO CART";
    
    **Expected:** "MELODY MOHAIR JUMPER WHITE" appears in the cart.
 
